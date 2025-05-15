@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@keyframes stripe-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+.btn {
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  -moz-user-select: text;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 16px 36px 22px;
+  background-color: #f7f7f7;
+  color: #252525;
+  border: 2px solid #252525;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  transition: all 0.5s ease;
+  font-family: "Playfair Display", serif;
+}
+.btn:-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.btn--stripe {
+  overflow: hidden;
+  position: relative;
+}
+.btn--stripe:after {
+  content: "";
+  display: block;
+  height: 7px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #252525,
+    #252525 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  backface-visibility: hidden;
+  border-top: 1px solid #252525;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-size: 7px 7px;
+}
+.btn--stripe:hover {
+  background-color: #252525;
+  color: #f7f7f7;
+  border-color: #252525;
+}
+.btn--stripe:hover:after {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #f7f7f7,
+    #f7f7f7 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  border-top: 1px solid #252525;
+  animation: stripe-slide 12s infinite linear forwards;
+}
+.btn--large {
+  width: 50%;
+}
+.btn--radius {
+  border-radius: 36px;
+} /*# sourceMappingURL=styles.css.map */

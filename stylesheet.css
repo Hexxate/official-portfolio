@@ -1,0 +1,409 @@
+/*****FONTS*****/
+
+.playfair-display-semiBold {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.playfair-display-normal {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+.dm-sans-medium {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.dm-sans-normal {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*****BODY*****/
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.blank_space {
+  color: #f7f7f7;
+}
+a {
+  text-decoration: none;
+}
+/*****HEADER*****/
+.header {
+  text-align: center;
+  display: block;
+  padding-top: 7rem;
+}
+
+.disclaimer {
+  border: 1px solid #252525;
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 40px;
+}
+
+.career {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.name {
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.header-rule {
+  width: 40%;
+  border: 1px solid #252525;
+}
+
+.small-desc {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: scrollText 10s linear infinite;
+  font-size: 32px;
+  padding-left: 100%; /* Push text to the right to start off-screen */
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*****NAVBAR*****/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Logo left, Contact right */
+  align-items: center;
+  padding: 20px 40px;
+  color: #252525;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+nav .logo {
+  max-width: fit-content;
+}
+
+#logo {
+  width: 100px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  flex-grow: 1; /* Makes sure the menu takes up remaining space */
+  justify-content: center; /* Centers the links */
+}
+
+nav .nav-links a,
+nav .contact {
+  text-decoration: none; /* Removes underline */
+  color: #252525; /* Sets the color to dark gray */
+}
+
+nav .nav-links a:hover,
+nav .contact:hover {
+  color: #000; /* Optional: changes the color when hovered */
+}
+
+/* Mobile menu button (hidden by default) */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    gap: 20px;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    visibility: hidden;
+    z-index: 999;
+  }
+
+  nav .nav-links.active {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  nav .contact {
+    display: none; /* Hide contact button on small screens */
+  }
+
+  /* Add contact link to mobile menu instead */
+  nav .nav-links li:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #logo {
+    width: 80px;
+  }
+}
+
+/* Mobile-only elements */
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+/*****ABOUT-ME*****/
+.abt-me {
+  display: flex;
+  justify-content: center; /*centers content horizontally*/
+  align-items: center; /*aligns items verticall*/
+  gap: 20px; /*Adds space between the photo sections and bio*/
+  padding: 10px;
+  margin-top: 50px;
+}
+.abt-me-img {
+  height: 40%;
+  width: 40%;
+}
+
+.photo-row1,
+.photo-row2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.bio-sctn {
+  max-width: 600px;
+  /*text-align: center;*/
+}
+.about {
+  text-align: center;
+}
+
+/*****UX/UI DESIGN*****/
+.h2-title {
+  margin-left: 50px;
+}
+
+.exp-item {
+  display: flex;
+  justify-content: space-between; /* Pushes year to far left and description to right */
+  align-items: center; /* Aligns items vertically */
+  width: 40%; /* Ensures it takes full width */
+  padding: 0 50px; /* Adds spacing on both sides */
+  margin-bottom: 15px;
+}
+
+.exp-item:hover {
+  background-color: #252525;
+  color: #f7f7f7;
+  transition: 0.5s ease-in-out;
+}
+
+.exp-item-desc {
+  max-width: 100%;
+}
+
+.prjct-name {
+  font-size: 28px;
+}
+
+.exp-row {
+  display: flex;
+  flex-wrap: wrap; /* optional: wrap items on smaller screens */
+  justify-content: space-around; /* or space-between, flex-start, etc. */
+  gap: 20px; /* optional spacing between items */
+}
+
+#full_resume {
+  margin: 0 auto;
+  display: block;
+}
+
+/****GRAPHIC DESIGN****/
+.grphc-dsn-prjcts {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  gap: 4rem;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align to top */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.grphc-dsn-title {
+  margin: 0 auto;
+}
+
+.carousel-flex-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.pbs-info {
+  max-width: 350px;
+  flex-grow: 1; /* Allow this container to grow to fill available space */
+  font-size: 1rem;
+}
+
+.carousel-container {
+  height: 380px;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  flex-grow: 1; /* Allow this container to grow to fill available space */
+  position: relative;
+}
+
+.carousel-images {
+  display: flex;
+  flex-direction: column;
+  animation: scrollVertical 18s linear infinite; /* Ensure animation runs here */
+  width: 100%; /* Make sure carousel takes full width */
+}
+
+.carousel-images div {
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 0.75rem;
+}
+
+/* Zoom on hover */
+.carousel-images img:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* Pause animation on hover */
+.carousel-container:hover .carousel-images {
+  animation-play-state: paused;
+}
+
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .grphc-dsn-prjcts {
+    flex-direction: column; /* Stack vertically on smaller screens */
+    align-items: center; /* Center horizontally */
+  }
+
+  .pbs-info,
+  .carousel-container {
+    max-width: 100%; /* Full width on small screens */
+  }
+}
+
+/*****FOOTER*****/
+footer {
+  background-color: #252525;
+  padding: 20px;
+}
+
+footer p {
+  color: #f7f7f7;
+  text-align: center;
+}
+
+#cntct-btn {
+  display: block;
+  margin: 10 auto;
+}
