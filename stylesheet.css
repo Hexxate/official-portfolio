@@ -262,6 +262,30 @@ nav .contact:hover {
   text-align: center;
 }
 
+/*****CURRENT PROJECTS*****/
+.curr-prjcts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.curr-prjcts-row {
+  display: flex;
+  flex-wrap: wrap; /* optional: wrap items on smaller screens */
+  justify-content: space-around; /* or space-between, flex-start, etc. */
+  gap: 20px; /* optional spacing between items */
+}
+
+.curr-prjct-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  padding: 0 50px;
+  margin-bottom: 15px;
+}
+
 /*****UX/UI DESIGN*****/
 .h2-title {
   margin-left: 50px;
